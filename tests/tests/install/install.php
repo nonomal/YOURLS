@@ -32,7 +32,7 @@ class Install_Tests extends PHPUnit\Framework\TestCase {
          *   - success messages: the table are created with a "CREATE IF NOT EXISTS",
          *     hence, will not be recreated once more, they're already created
          *     upon install procedure
-         *   - error messages: the function cannot initalize options and links, since
+         *   - error messages: the function cannot initialize options and links, since
          *     they have been populated during install procedure as well
          *
          * A more thorough test would be to mockup the DB connection and create another
@@ -108,7 +108,6 @@ class Install_Tests extends PHPUnit\Framework\TestCase {
 
         $expected = array (
             'include_core_funcs' => true,
-            'include_install_upgrade_funcs' => false,
             'default_timezone' => true,
             'load_default_textdomain' => true,
             'check_maintenance_mode' => true,
